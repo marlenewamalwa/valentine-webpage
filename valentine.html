@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Be My Valentine</title>
+  <style>
+    body {
+      background-color: #ffe6e6;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      font-family: 'Times New Roman', Times, serif, sans-serif;
+    }
+
+    /* To and From section styles */
+    .to-from {
+      background-color: #fff0f3;
+      border: 2px dashed #800707;
+      border-radius: 12px;
+      padding: 20px;
+      text-align: center;
+      font-family: 'Arial', sans-serif;
+      color: #800707;
+      margin: 20px auto;
+      width: 80%;
+      max-width: 400px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .to-from p {
+      margin: 10px 0;
+      font-size: 18px;
+      font-weight: bold;
+    }
+
+    .to-from strong {
+      color: #800707;
+    }
+
+    .container {
+      display: flex;
+      align-items: center;
+      background: #fff;
+      border-radius: 15px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      animation: fadeIn 2s ease-in;
+      overflow: hidden;
+      max-width: 800px;
+      width: 90%;
+      margin: 20px 0;
+    }
+
+    .image {
+      flex: 1;
+      max-width: 300px;
+      height: 100%;
+    }
+
+    .image img {
+      width: 100%;
+      height: auto;
+      border-top-left-radius: 15px;
+      border-bottom-left-radius: 15px;
+    }
+
+    .content {
+      flex: 2;
+      text-align: center;
+      padding: 30px;
+    }
+
+    h1 {
+      color: #800707;
+      margin-bottom: 10px;
+    }
+
+    p {
+      font-size: 16px;
+      color: #333;
+      margin-bottom: 20px;
+    }
+
+    .heart {
+      font-size: 50px;
+      color: #800707;
+      animation: heartbeat 1.5s infinite;
+    }
+
+    .btn {
+      background-color: #800707;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      font-size: 16px;
+      border-radius: 5px;
+      cursor: pointer;
+      margin: 10px;
+      transition: transform 0.3s ease;
+    }
+
+    .btn:hover {
+      transform: scale(1.1);
+    }
+
+    @keyframes heartbeat {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.3); }
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- To and From section at the top -->
+  <section class="to-from">
+    <p><strong>To:</strong> Sarah</p>
+    <p><strong>From:</strong> Marlene</p>
+  </section>
+
+  <!-- Main container -->
+  <div class="container">
+    <!-- Left: Image -->
+    <div class="image">
+      <img src="milk.jpeg" alt="Valentine Image">
+    </div>
+
+    <!-- Right: Content -->
+    <div class="content">
+      <div class="heart">❤️</div>
+      <h1>Will You Be My Valentine?</h1>
+      <p>
+        Hello my darling baby, will you do me the honour of being my valentine this year.
+        Thank you for the best 1 year of my life, I say 1 because last year I made the worst mistake of thinking me and you should be apart. A lot has changed since then. I love you so much more and I cannot wait to spend Valentines with you in all kinds of places. 💕
+      </p>
+      <button class="btn" onclick="showMessage('YES')">YES</button>
+      <button class="btn" onclick="showMessage('ABSOLUTELY YES')">ABSOLUTELY YES</button>
+    </div>
+  </div>
+
+  <script>
+    function showMessage(answer) {
+      alert(`You said ${answer}! You are the best girlfriend Sarah ❤️`);
+    }
+  </script>
+</body>
+</html>
